@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     container_name: example-db
     ports:
-      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+      - "${POSTGRES_PORT}:5435"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
