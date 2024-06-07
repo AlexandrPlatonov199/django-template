@@ -420,3 +420,5 @@ cython_debug/
 
 ## S/MIME message
 *.smime
+
+core/project/settings/local.py
