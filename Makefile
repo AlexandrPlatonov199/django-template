@@ -28,6 +28,10 @@ app:
 app-logs:
 	${LOGS} ${APP_CONTAINER} -f
 
+.PHONY: app-down
+app-down:
+	${DC} -f ${APP_FILE} -f ${STORAGES_FILE} down
+
 .PHONY: migrate
 migrate:
 	${EXEC} ${APP_CONTAINER} ${MANAGE_PY} migrate
